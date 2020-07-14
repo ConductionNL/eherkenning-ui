@@ -3,14 +3,27 @@ entries:
   digispoof-ui:
   - apiVersion: v1
     appVersion: V.0.1
-    created: "2020-06-08T18:21:11.4066321Z"
+    created: "2020-07-14T08:31:48.264196Z"
     description: '&#039;Naast deze JSON rest API is er ook een [graphql](/graphql)
       interface beschikbaar.&#039;'
-    digest: d305e2c5f1e12342a3784e7961d2d18a9842d70c59809cb7bfed39d2d674b3cc
+    digest: a4c079aedb1e81dca6806dec26ad9d07847df3f1eebdab1d8d2be6d04c08016d
     home: https://common-ground.dev
     icon: https://common-ground.dev/logo-250x250.png
     name: digispoof-ui
     urls:
     - digispoof-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-06-08T18:21:11.4016744Z"
+  eherkenning-ui:
+  - apiVersion: v1
+    appVersion: V.0.1
+    created: "2020-07-14T08:31:48.2699786Z"
+    description: '&#039;Naast deze JSON rest API is er ook een [graphql](/graphql)
+      interface beschikbaar.&#039;'
+    digest: c067316bbe74d432a2d43258802f1d927e8dfa340901ba7b5d9ccc636e473ca5
+    home: https://common-ground.dev
+    icon: https://common-ground.dev/logo-250x250.png
+    name: eherkenning-ui
+    urls:
+    - eherkenning-ui-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-07-14T08:31:48.255893Z"

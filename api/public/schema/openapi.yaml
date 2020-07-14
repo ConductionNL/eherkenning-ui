@@ -1,16 +1,16 @@
 openapi: 3.0.2
 info:
-  title: Digispoof
+  title: eherkenning
   version: V.0.1
   description: |
     API Details
-    - Component: Digispoof
-    - Reference: digispoof-ui
+    - Component: eherkenning
+    - Reference: eherkenning-ui
     - Enviroment: dev
     - Version: V.0.1
-    - Repository: [online](https://github.com/ConductionNL/digispoof-interface) / [zip](https://github.com/ConductionNL/digispoof-interface/archive/master.zip)
-    - Docker Image: [online](https://hub.docker.com/repository/docker/conduction/digispoof-ui-php) 
-    - Datamodel: [postman](/schema/digispoof-ui.postman_collection.json) / [oas](/schema/openapi.yaml) / [pdf](/schema/datamodel.pdf) / [modelio (zip)](/schema/Datamodel_Modelio.zip) 
+    - Repository: [online](https://github.com/ConductionNL/eherkenning-ui) / [zip](https://github.com/ConductionNL/eherkenning-ui/archive/master.zip)
+    - Docker Image: [online](https://hub.docker.com/repository/docker/conduction/eherkenning-ui) 
+    - Datamodel: [postman](/schema/eherkenning-ui.postman_collection.json) / [oas](/schema/openapi.yaml) / [pdf](/schema/datamodel.pdf) / [modelio (zip)](/schema/Datamodel_Modelio.zip) 
     
     'Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.'         
     
@@ -2409,12 +2409,12 @@ definitions:
         description: 'The moment this request was created'
         type: string
         format: date-time
-        example: '2020-06-08 18:27:04'
+        example: '2020-07-14 08:32:54'
       dateModified:
         description: 'The moment this request last Modified'
         type: string
         format: date-time
-        example: '2020-06-08 18:27:04'
+        example: '2020-07-14 08:32:54'
     required: []
   AuditTrail-write:
     properties:
@@ -2462,12 +2462,12 @@ definitions:
         description: 'The moment this request was created'
         type: string
         format: date-time
-        example: '2020-06-08 18:27:04'
+        example: '2020-07-14 08:32:54'
       dateModified:
         description: 'The moment this request last Modified'
         type: string
         format: date-time
-        example: '2020-06-08 18:27:04'
+        example: '2020-07-14 08:32:54'
     required: []
   ChangeLog-write:
     properties:
@@ -2509,7 +2509,7 @@ host: irc.zaakonline.nl
 servers:
   -
     name: westfriesland.commonground.nu
-    url: digispoof-ui.dev.westfriesland.commonground.nu
+    url: eherkenning-ui.dev.westfriesland.commonground.nu
 externalDocs:
   -
     description: 'OAS Documentatie'

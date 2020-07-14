@@ -4,16 +4,16 @@
 
 settings:
   registryBase: docker.io/conduction
-  projectName: digispoof-ui
-  name: digispoof-ui
-  title: Digispoof
+  projectName: eherkenning-ui
+  name: eherkenning-ui
+  title: eherkenning
   version: V.0.1
   id: 
   description: '&#039;Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.&#039;'
   type: application
-  repro: https://github.com/ConductionNL/digispoof-interface
+  repro: https://github.com/ConductionNL/eherkenning-ui
   demo: digispoof.conduction.nl
-  container: https://hub.docker.com/repository/docker/conduction/digispoof-ui-php
+  container: https://hub.docker.com/repository/docker/conduction/eherkenning-ui
   domain: westfriesland.commonground.nu
   subdomain: ds
   organisationName: Conduction

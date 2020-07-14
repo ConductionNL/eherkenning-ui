@@ -9,6 +9,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use GuzzleHttp\Client;
+
 
 use Conduction\CommonGroundBundle\Service\CommonGroundService;
 
@@ -30,6 +32,15 @@ class DefaultController extends AbstractController
 		$responceUrl = $request->query->get('responceUrl');
 		$brpUrl = $request->query->get('brpUrl');
 		$url = $request->getHost();
+        $client = new Client([
+            // Base URI is used with relative requests
+            'base_uri' => 'https://api.kvk.nl',
+            // You can set any number of default request options.
+            'timeout'  => 2.0,
+        ]);
+
+        $response = $client->request('GET', '/api/v2/testsearch/companies?q=test');
+        $kvk = json_decode($response->getBody()->getContents(), true);
 
 		if($brpUrl){
             $people = $commonGroundService->getResourceList($brpUrl);
@@ -38,7 +49,7 @@ class DefaultController extends AbstractController
             $people = $commonGroundService->getResourceList(['component'=>'brp','type'=>'ingeschrevenpersonen']);
         }
 
-		return ['people'=>$people, 'responceUrl' => $responceUrl, 'token' => $token];
+		return ['people'=>$people,'kvk'=>$kvk, 'responceUrl' => $responceUrl, 'token' => $token];
 	}
 
 }

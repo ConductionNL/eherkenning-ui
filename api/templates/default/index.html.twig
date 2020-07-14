@@ -1,11 +1,7 @@
 {% extends "base.html.twig" %}
-
 {% block content %}
-
-
     <div class="row">
         <div class="col-md-8">
-
               <div class="notification notification--error">
                 <div class="notification__content">
                   <div class="notification__type">Let op!</div>
@@ -13,11 +9,9 @@
                   <span>Dit formulier is uitsluitend bedoeld voor test doeleinden en zet geen bestaande persoons/bedrijfs gegevens door</span>
                 </div>
               </div>
-
             <div class="content-background">
             	<div class="content">
             		<h2>Kies een persona & bedrijf</h2>
-
                     <form action="{{ responceUrl }}" method="post">
                         <div class="input">
                             <label class="input__label" for="color">Persoon</label>
@@ -27,7 +21,6 @@
 								{% endfor %}
                             </select>
                         </div>
-
                         <div class="input">
                             <label class="input__label" for="color">Bedrijf</label>
                             <select id="kvk" name="kvk" class="input__control input__control--m input__control--select ">
@@ -43,21 +36,14 @@
                                 {% endfor %}
                             </select>
                         </div>
-
 						<input type="hidden" name="responce_url" value="{{ responceUrl }}">
 						<input type="hidden" name="token" value="{{ token }}">
-
                         <button class="btn" type="submit">Inloggen</button>
-
                    </form>
-
                 </div><!-- /.content -->
             </div><!-- /.content-background -->
         </div><!-- /.col -->
-
-
         <div class="col-md-4">
-
             <div class="content-background" >
             	<div class="content">
             		<h2>Over dit formlier</h2>
@@ -71,6 +57,4 @@
             </div><!-- /.content-background -->
         </div><!-- /.col -->
 	</div><!-- /.row -->
-
-
 {% endblock %}

@@ -30,6 +30,8 @@
                                             {{ bedrijf.tradeNames.businessName }}
                                         {% elseif bedrijf.tradeNames.shortBusinessName is defined and bedrijf.tradeNames.shortBusinessName is not empty %}
                                             {{ bedrijf.tradeNames.shortBusinessName }}
+                                        {% elseif bedrijf.tradeNames.currentTradeNames[0] is defined and bedrijf.tradeNames.currentTradeNames[0] is not empty %}
+                                            {{ bedrijf.tradeNames.currentTradeNames[0] }}
                                         {% endif %}
                                     </option>
 

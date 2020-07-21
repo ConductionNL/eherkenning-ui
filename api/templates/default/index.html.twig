@@ -25,7 +25,8 @@
                             <label class="input__label" for="color">Bedrijf</label>
                             <select id="kvk" name="kvk" class="input__control input__control--m input__control--select ">
                                 {% for bedrijf in kvk.data.items %}
-                                    <option value="{{ bedrijf.kvkNumber }}">
+                                    {% if bedrijf.isMainBranch == 'true' and bedrijf.branchNumber is not empty %}
+                                    <option value="{{ bedrijf.branchNumber }}">
                                         {% if bedrijf.tradeNames.businessName is defined and bedrijf.tradeNames.businessName is not empty %}
                                             {{ bedrijf.tradeNames.businessName }}
                                         {% elseif bedrijf.tradeNames.shortBusinessName is defined and bedrijf.tradeNames.shortBusinessName is not empty %}
@@ -34,7 +35,7 @@
                                             {{ bedrijf.tradeNames.currentTradeNames[0] }}
                                         {% endif %}
                                     </option>
-
+                                    {% endif %}
                                 {% endfor %}
                             </select>
                         </div>

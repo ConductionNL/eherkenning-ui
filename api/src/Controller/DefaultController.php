@@ -39,7 +39,7 @@ class DefaultController extends AbstractController
             'timeout'  => 2.0,
         ]);
 
-        $response = $client->request('GET', '/api/v2/testsearch/companies?q=test');
+        $response = $client->request('GET', '/api/v2/testsearch/companies?q=test&mainBranch=true&branch=false');
         $kvk = json_decode($response->getBody()->getContents(), true);
 
 		if($brpUrl){

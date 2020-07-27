@@ -1,1 +1,1 @@
-eherkenning-ui
+digispoof-interface

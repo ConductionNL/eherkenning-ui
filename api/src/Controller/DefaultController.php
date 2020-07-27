@@ -28,10 +28,11 @@ class DefaultController extends AbstractController
 	 */
 	public function indexAction(Request $request, CommonGroundService $commonGroundService)
 	{
-		$token = $request->query->get('token');
-		$responceUrl = $request->query->get('responceUrl');
-		$brpUrl = $request->query->get('brpUrl');
-		$url = $request->getHost();
+        $token = $request->query->get('token');
+        $responceUrl = $request->query->get('responceUrl');
+        $backUrl = $request->query->get('backUrl');
+        $brpUrl = $request->query->get('brpUrl');
+        $url = $request->getHost();
         $client = new Client([
             // Base URI is used with relative requests
             'base_uri' => 'https://api.kvk.nl',
@@ -49,7 +50,7 @@ class DefaultController extends AbstractController
             $people = $commonGroundService->getResourceList(['component'=>'brp','type'=>'ingeschrevenpersonen']);
         }
 
-		return ['people'=>$people,'kvk'=>$kvk, 'responceUrl' => $responceUrl, 'token' => $token];
+		return ['people'=>$people,'kvk'=>$kvk, 'responceUrl' => $responceUrl, 'backUrl' => $backUrl, 'token' => $token];
 	}
 
 }

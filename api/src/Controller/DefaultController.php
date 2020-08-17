@@ -4,30 +4,26 @@
 
 namespace App\Controller;
 
-use Doctrine\ORM\EntityManagerInterface;
+use Conduction\CommonGroundBundle\Service\CommonGroundService;
+use GuzzleHttp\Client;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use GuzzleHttp\Client;
-
-
-use Conduction\CommonGroundBundle\Service\CommonGroundService;
 
 /**
- * Class DeveloperController
- * @package App\Controller
+ * Class DeveloperController.
+ *
  * @Route("/")
  */
 class DefaultController extends AbstractController
 {
-
-	/**
-	 * @Route("/")
-	 * @Template
-	 */
-	public function indexAction(Request $request, CommonGroundService $commonGroundService)
-	{
+    /**
+     * @Route("/")
+     * @Template
+     */
+    public function indexAction(Request $request, CommonGroundService $commonGroundService)
+    {
         $token = $request->query->get('token');
         $responceUrl = $request->query->get('responceUrl');
         $backUrl = $request->query->get('backUrl');
@@ -43,20 +39,12 @@ class DefaultController extends AbstractController
         $response = $client->request('GET', '/api/v2/testsearch/companies?q=test&mainBranch=true&branch=false');
         $kvk = json_decode($response->getBody()->getContents(), true);
 
-		if($brpUrl){
+        if ($brpUrl) {
             $people = $commonGroundService->getResourceList($brpUrl);
-		}
-		else{
-            $people = $commonGroundService->getResourceList(['component'=>'brp','type'=>'ingeschrevenpersonen'])['hydra:member'];
+        } else {
+            $people = $commonGroundService->getResourceList(['component'=>'brp', 'type'=>'ingeschrevenpersonen'])['hydra:member'];
         }
 
-		return ['people'=>$people,'kvk'=>$kvk, 'responceUrl' => $responceUrl, 'backUrl' => $backUrl, 'token' => $token];
-	}
-
+        return ['people'=>$people, 'kvk'=>$kvk, 'responceUrl' => $responceUrl, 'backUrl' => $backUrl, 'token' => $token];
+    }
 }
-
-
-
-
-
-

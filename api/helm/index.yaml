@@ -3,14 +3,14 @@ entries:
   eherkenning-ui:
   - apiVersion: v1
     appVersion: V.0.1
-    created: "2020-07-29T09:05:55.854701301Z"
-    description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
-      beschikbaar.
-    digest: 1ebdeb0bb3f0b008d981114186dd1e380186b16e43a970682c01da404af31c05
+    created: "2020-09-30T12:54:18.0864959Z"
+    description: '&#039;Naast deze JSON rest API is er ook een [graphql](/graphql)
+      interface beschikbaar.&#039;'
+    digest: 08f5d615c7b0935c2ddc9e868b2da58ad2104302e23b2110c61231dded8c1904
     home: https://common-ground.dev
     icon: https://common-ground.dev/logo-250x250.png
     name: eherkenning-ui
     urls:
     - eherkenning-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-07-29T09:05:55.848018901Z"
+generated: "2020-09-30T12:54:18.0806148Z"

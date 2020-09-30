@@ -9,13 +9,13 @@ settings:
   title: eherkenning
   version: V.0.1
   id: 
-  description: 'Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.'
+  description: '&#039;Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.&#039;'
   type: application
   repro: https://github.com/ConductionNL/eherkenning-ui
   demo: digispoof.conduction.nl
   container: https://hub.docker.com/repository/docker/conduction/eherkenning-ui
   domain: zuid-drecht.nl
-  subdomain: eh
+  subdomain: eherkenning-ui
   organisationName: Conduction
   email: info@conduction.nl
   country: Netherlands

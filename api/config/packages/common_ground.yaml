@@ -38,7 +38,6 @@ parameters:
     env(APP_WEB): false
     env(APP_INTERNAL): false
     env(APP_BUILD_ALL_FIXTURES): false
-    env(APP_SESSION_DURATION): 900
 
     env(APP_CONTAINER): ""
     env(APP_REPRO): ""
@@ -69,7 +68,6 @@ parameters:
     app_web: "%env(APP_WEB)%"
     app_internal: "%env(APP_INTERNAL)%"
     app_build_all_fixtures: "%env(APP_BUILD_ALL_FIXTURES)%"
-    app_session_duration: "%env(APP_SESSION_DURATION)%"
 
     # Organisatie details
     env(GOOGLE_TAG_MANAGER_ID): ""
@@ -160,11 +158,6 @@ parameters:
     # BasisAdressenGemeenten
     env(APP_COMMONGROUND_BAG_LOCATION): "https://bag.basisregistraties.overheid.nl/api/v1/"
     env(APP_COMMONGROUND_BAG_APIKEY): "%env(APP_COMMONGROUND_KEY)%"
-    # KamerVanKoophandel
-    env(APP_COMMONGROUND_KVK_LOCATION): "https://kvk.%env(APP_DOMAIN)%"
-    env(APP_COMMONGROUND_KVK_APIKEY): "%env(APP_COMMONGROUND_KEY)%"
-    common_ground.kvk.location: "%env(APP_COMMONGROUND_KVK_LOCATION)%"
-    common_ground.kvk.apikey: "%env(APP_COMMONGROUND_KVK_APIKEY)%"
     # DienstWegverkeer
     env(APP_COMMONGROUND_RDW_LOCATION): "https://rdw.%env(APP_DOMAIN)%"
     env(APP_COMMONGROUND_RDW_APIKEY): "%env(APP_COMMONGROUND_KEY)%"
@@ -244,9 +237,6 @@ parameters:
         bag:
             location: "%env(APP_COMMONGROUND_BAG_LOCATION)%"
             apikey: "%env(APP_COMMONGROUND_BAG_APIKEY)%"
-        kvk:
-            location: "%env(APP_COMMONGROUND_KVK_LOCATION)%"
-            apikey: "%env(APP_COMMONGROUND_KVK_APIKEY)%"
         rdw:
             location: "%env(APP_COMMONGROUND_RDW_LOCATION)%"
             apikey: "%env(APP_COMMONGROUND_RDW_APIKEY)%"
@@ -315,7 +305,6 @@ twig:
         app_web: "%env(APP_WEB)%"
         app_internal: "%env(APP_INTERNAL)%"
         app_build_all_fixtures: "%env(APP_BUILD_ALL_FIXTURES)%"
-        app_session_duration: "%env(APP_SESSION_DURATION)%"
 
         # Security Details
         app_commonground_id: "%env(APP_COMMONGROUND_ID)%"

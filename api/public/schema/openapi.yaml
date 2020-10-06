@@ -1,13 +1,13 @@
 openapi: 3.0.2
 info:
   title: eherkenning
-  version: V.0.1
+  version: V1.0
   description: |
     API Details
     - Component: eherkenning
     - Reference: eherkenning-ui
     - Enviroment: dev
-    - Version: V.0.1
+    - Version: V1.0
     - Repository: [online](https://github.com/ConductionNL/eherkenning-ui) / [zip](https://github.com/ConductionNL/eherkenning-ui/archive/master.zip)
     - Docker Image: [online](https://hub.docker.com/repository/docker/conduction/eherkenning-ui) 
     - Datamodel: [postman](/schema/eherkenning-ui.postman_collection.json) / [oas](/schema/openapi.yaml) / [pdf](/schema/datamodel.pdf) / [modelio (zip)](/schema/Datamodel_Modelio.zip) 
@@ -399,6 +399,15 @@ paths:
           schema:
             type: integer
             default: 1
+        -
+          name: limit
+          in: query
+          required: false
+          description: 'The number of items per page'
+          schema:
+            type: integer
+            default: 30
+            minimum: 0
         -
           name: Authorization
           description: 'The JWT of the entity performing the request'
@@ -1297,6 +1306,15 @@ paths:
             type: integer
             default: 1
         -
+          name: limit
+          in: query
+          required: false
+          description: 'The number of items per page'
+          schema:
+            type: integer
+            default: 30
+            minimum: 0
+        -
           name: Authorization
           description: 'The JWT of the entity performing the request'
           in: header
@@ -2168,6 +2186,15 @@ paths:
           schema:
             type: integer
             default: 1
+        -
+          name: limit
+          in: query
+          required: false
+          description: 'The number of items per page'
+          schema:
+            type: integer
+            default: 30
+            minimum: 0
         -
           name: Authorization
           description: 'The JWT of the entity performing the request'
@@ -3559,12 +3586,12 @@ definitions:
         description: 'The moment this request was created'
         type: string
         format: date-time
-        example: '2020-09-30 12:56:00'
+        example: '2020-10-06 12:45:53'
       dateModified:
         description: 'The moment this request last Modified'
         type: string
         format: date-time
-        example: '2020-09-30 12:56:00'
+        example: '2020-10-06 12:45:53'
     required: []
   AuditTrail-write:
     properties:
@@ -3612,12 +3639,12 @@ definitions:
         description: 'The moment this request was created'
         type: string
         format: date-time
-        example: '2020-09-30 12:56:00'
+        example: '2020-10-06 12:45:53'
       dateModified:
         description: 'The moment this request last Modified'
         type: string
         format: date-time
-        example: '2020-09-30 12:56:00'
+        example: '2020-10-06 12:45:53'
     required: []
   ChangeLog-write:
     properties:

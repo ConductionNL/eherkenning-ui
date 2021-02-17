@@ -3,14 +3,14 @@ entries:
   eherkenning-ui:
   - apiVersion: v1
     appVersion: V1.0
-    created: "2020-10-06T12:44:32.4768698Z"
-    description: '&#039;Naast deze JSON rest API is er ook een [graphql](/graphql)
-      interface beschikbaar.&#039;'
-    digest: f249b9ca056011638933e7e747e9976e0bb15d1aa578a73782d5f8ac939e7082
+    created: "2021-02-17T21:54:07.8558642Z"
+    description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
+      beschikbaar.
+    digest: ffcaf1f1296c07998ea440b55ecc0bab1593d2a797b15252364ac243a092417c
     home: www.conduction.nl
     icon: www.conduction.nl
     name: eherkenning-ui
     urls:
     - eherkenning-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-10-06T12:44:32.4709533Z"
+generated: "2021-02-17T21:54:07.8515378Z"

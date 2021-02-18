@@ -3,10 +3,10 @@ entries:
   eherkenning-ui:
   - apiVersion: v1
     appVersion: V1.0
-    created: "2021-02-18T09:43:00.8763229Z"
+    created: "2021-02-18T20:13:15.2874328Z"
     description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
       beschikbaar.
-    digest: bc23091d8fdb46b011d3cb9c2ffe9b0e4330fa6c78000bf9ba0dfae1862de286
+    digest: ae07f504589c314fcff27cfc9d6f2e487613ce203bc5f44b3026cdaab47ec535
     home: www.conduction.nl
     icon: www.conduction.nl
     name: eherkenning-ui
@@ -18,7 +18,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.10.0
-    created: "2021-02-18T09:43:00.8866374Z"
+    created: "2021-02-18T20:13:15.2972062Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -47,4 +47,4 @@ entries:
     urls:
     - charts/postgresql-10.1.1.tgz
     version: 10.1.1
-generated: "2021-02-18T09:43:00.8552021Z"
+generated: "2021-02-18T20:13:15.2779385Z"

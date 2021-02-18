@@ -3,14 +3,48 @@ entries:
   eherkenning-ui:
   - apiVersion: v1
     appVersion: V1.0
-    created: "2021-02-17T21:54:07.8558642Z"
+    created: "2021-02-18T09:43:00.8763229Z"
     description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
       beschikbaar.
-    digest: ffcaf1f1296c07998ea440b55ecc0bab1593d2a797b15252364ac243a092417c
+    digest: bc23091d8fdb46b011d3cb9c2ffe9b0e4330fa6c78000bf9ba0dfae1862de286
     home: www.conduction.nl
     icon: www.conduction.nl
     name: eherkenning-ui
     urls:
     - eherkenning-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-17T21:54:07.8515378Z"
+  postgresql:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 11.10.0
+    created: "2021-02-18T09:43:00.8866374Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: Chart for PostgreSQL, an object-relational database management system
+      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    digest: eebe8f456cf98d5927a35666d1d899174dc4d3e09f26788033f761527bc90749
+    home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    - https://www.postgresql.org/
+    urls:
+    - charts/postgresql-10.1.1.tgz
+    version: 10.1.1
+generated: "2021-02-18T09:43:00.8552021Z"

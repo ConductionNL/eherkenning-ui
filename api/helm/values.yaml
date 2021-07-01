@@ -60,7 +60,7 @@ postgresql:
 
 ingress:
   enabled: false
-  hostname: .local
+  hostname: eherkenning-ui.local
   path: /
   annotations:
     # kubernetes.io/ingress.global-static-ip-name: chart-ip

@@ -1,12 +1,48 @@
 apiVersion: v1
 entries:
   eherkenning-ui:
-  - apiVersion: v1
+  - annotations:
+      artifacthub.io/containsSecurityUpdates: "true"
+    apiVersion: v2
     appVersion: V1.0
-    created: "2021-02-19T14:29:52.5124015Z"
+    created: "2021-07-01T13:15:31.7116751Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.1.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.7.7
     description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
       beschikbaar.
-    digest: f58b8446f8f6473e4eb3fcfc2c779604be6d07b1cec3055044b4ea4f54e9604b
+    digest: 8cebf9b40b4c6ab88112f6c0daf067ba4b199434c72dcf1b8c0f67c9ba0ea44c
+    home: https://www.conduction.nl
+    icon: https://conductionnl.github.io/images/conduction_avatar_blue_on_transparant.svg
+    keywords:
+    - commonground
+    - haven
+    - nlx
+    - component
+    maintainers:
+    - email: ruben@conduction.nl
+      name: Ruben van der Linde
+    - email: info@conduction.nl
+      name: Conduction
+    name: eherkenning-ui
+    sources:
+    - https://commonground.conduction.nl/
+    - https://www.commonground.nl/
+    urls:
+    - eherkenning-ui-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v1
+    appVersion: V1.0
+    created: "2021-07-01T13:15:31.7027259Z"
+    description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
+      beschikbaar.
+    digest: 4ca397017b4fb65917f54d4ff70b4f7e184f657c0abfea2a561485a55887f7f7
     home: https://www.conduction.nl
     icon: https://conductionnl.github.io/images/conduction_avatar_blue_on_transparant.svg
     keywords:
@@ -31,7 +67,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.10.0
-    created: "2021-02-19T14:29:52.5296675Z"
+    created: "2021-07-01T13:15:31.7173294Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -60,4 +96,38 @@ entries:
     urls:
     - charts/postgresql-10.1.1.tgz
     version: 10.1.1
-generated: "2021-02-19T14:29:52.4954577Z"
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.0.11
+    created: "2021-07-01T13:15:31.7220836Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Open source, advanced key-value store. It is often referred to as
+      a data structure server since keys can contain strings, hashes, lists, sets
+      and sorted sets.
+    digest: 2d70861d16fc410ed6d6c818b97f7b0d519031147e5c7b42c5691d4c38742c44
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    - http://redis.io/
+    urls:
+    - charts/redis-12.7.7.tgz
+    version: 12.7.7
+generated: "2021-07-01T13:15:31.6964Z"
